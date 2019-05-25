@@ -1,0 +1,25 @@
+dataset 	 SVHN
+total_n_pseudo_batches 	 1000
+n_generator_iter 	 1
+n_student_iter 	 7
+batch_size 	 128
+z_dim 	 100
+student_learning_rate 	 0.002
+generator_learning_rate 	 0.001
+teacher_architecture 	 LeNet
+student_architecture 	 LeNet
+KL_temperature 	 1
+AT_beta 	 250
+pretrained_models_path 	 /home/paul/Pretrained/
+datasets_path 	 /home/paul/Datasets/Pytorch/
+log_directory_path 	 /home/paul/git/ZeroShotKnowledgeTransfer/logs/
+save_final_model 	 0
+save_n_checkpoints 	 0
+save_model_path 	 /home/paul/git/FewShotKT/logs/
+seeds 	 [0, 1]
+workers 	 1
+use_gpu 	 False
+log_freq 	 10
+dataset_path 	 /home/paul/Datasets/Pytorch/SVHN
+device 	 cpu
+experiment_name 	 ZEROSHOTKT_SVHN_LeNet_LeNet_gi1_si7_zd100_plr0.001_slr0.002_bs128_T1_beta250/ZEROSHOTKT_SVHN_LeNet_LeNet_gi1_si7_zd100_plr0.001_slr0.002_bs128_T1_beta250_seed0
