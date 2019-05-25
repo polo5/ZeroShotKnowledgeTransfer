@@ -2,11 +2,11 @@
 
 This is accompanying code for the paper "Zero-shot Knowledge Transfer via Adversarial Belief Matching" [see arxiv](https://arxiv.org/abs/1905.09768)
 
-## What is this work about?
+## What is this work about? (TLDR)
 
 ![picture](images/butterfly.gif)
 
-**TLDR:** Our task is to compress a large neural network (teacher) into a smaller one (student), but we assume that the data used to train the teacher is not available anymore. We thus generate data adversarially (yellow markers above) and use that for distillation instead.
+ Our task is to compress a large neural network (teacher) into a smaller one (student), but we assume that the data used to train the teacher is not available anymore. We thus generate pseudo points adversarially (yellow markers above) and use those to match the student (right) to the teacher (left).
 
 ## Environment
 - Python 3.6
@@ -21,7 +21,7 @@ This is accompanying code for the paper "Zero-shot Knowledge Transfer via Advers
 ## Make transition curves
 1. Pretrain a zero-shot student or a student with KD+AT
 2. Edit the paths in scripts/TransitionCurves/transition_curves0.sh and run it
-
+3. This saves .pickle file with all the transition curves
 
 ## Cite
 This work is under review for NeurIPS2019. In the mean time, please cite:

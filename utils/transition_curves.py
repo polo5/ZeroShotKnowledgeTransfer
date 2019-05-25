@@ -1,9 +1,12 @@
-import pickle
-
+import torchvision.datasets as datasets
+import torchvision.transforms as transforms
+from torch.utils.data import DataLoader, Dataset
 from torch.utils.data.sampler import SubsetRandomSampler
-
-from solver import *
+import pickle
+import sys, os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from utils.helpers import *
+from models.selector import *
 
 
 class TestDatasetWithIdx(Dataset):
@@ -30,10 +33,11 @@ class TestDatasetWithIdx(Dataset):
         return len(self.dataset)
 
 
+#TODO: batch this code so it runs faster
 class TransitionCurves(object):
     """
     Compute transition curves (p_j_A, p_j_B) as we adversarially
-    step on netA to go from class i to j
+    step on netA to go from class i to j.
     """
 
     def __init__(self, args):

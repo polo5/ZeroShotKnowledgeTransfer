@@ -19,7 +19,7 @@ def main(args):
             print('\n\n----------- SEED {} -----------\n\n'.format(seed))
             set_torch_seeds(seed)
             args.experiment_name = os.path.join(base_name, base_name+'_seed'+str(seed))
-            solver = FewShotKTSolver(args)
+            solver = ZeroShotKTSolver(args)
             test_acc = solver.run()
             test_accs.append(test_acc)
         mu = np.mean(test_accs)
@@ -30,7 +30,7 @@ def main(args):
             f.write("NA")
     else:
         set_torch_seeds(args.seeds[0])
-        solver = FewShotKTSolver(args)
+        solver = ZeroShotKTSolver(args)
         test_acc = solver.run()
         print('\n\nFINAL TEST ACC RATE: {:02.2f}'.format(test_acc))
         file_name = "final_test_acc_{:02.2f}".format(test_acc)

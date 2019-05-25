@@ -13,9 +13,9 @@ python ${EXECUTABLE_FILE} \
 --dataset CIFAR10 \
 --netA_path ${NETA_PATH} \
 --netB_path ${NETB_PATH} \
---netA_architecture WRN-40-2 \
---netB_architecture WRN-16-1 \
---check_test_accuracies False \
+--netA_architecture WRN-16-1 \
+--netB_architecture WRN-40-2 \
+--check_test_accuracies True \
 --use_train_set False \
 --n_matching_images 1000 \
 --try_load_indices False \

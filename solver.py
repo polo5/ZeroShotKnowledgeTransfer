@@ -13,7 +13,8 @@ from models.selector import *
 from utils.loaders import *
 
 
-class FewShotKTSolver(object):
+class ZeroShotKTSolver(object):
+    """ Main solver class to train and test the generator and student adversarially """
     def __init__(self, args):
         self.args = args
 
