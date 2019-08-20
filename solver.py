@@ -20,19 +20,19 @@ class ZeroShotKTSolver(object):
 
         ## Student and Teacher Nets
         self.teacher = select_model(dataset=args.dataset,
-                                    model_name = args.teacher_architecture,
-                                    pretrained = True,
-                                    pretrained_models_path = args.pretrained_models_path).to(args.device)
+                                    model_name=args.teacher_architecture,
+                                    pretrained=True,
+                                    pretrained_models_path=args.pretrained_models_path).to(args.device)
         self.student = select_model(dataset=args.dataset,
                                     model_name=args.student_architecture,
                                     pretrained=False,
-                                    pretrained_models_path = args.pretrained_models_path).to(args.device)
+                                    pretrained_models_path=args.pretrained_models_path).to(args.device)
         self.teacher.eval()
         self.student.train()
 
         ## Loaders
         self.n_repeat_batch = args.n_generator_iter + args.n_student_iter
-        self.generator = LearnableLoader(args = args, n_repeat_batch = self.n_repeat_batch).to(device=args.device)
+        self.generator = LearnableLoader(args=args, n_repeat_batch=self.n_repeat_batch).to(device=args.device)
         self.test_loader = get_test_loader(args)
 
         ## Optimizers & Schedulers

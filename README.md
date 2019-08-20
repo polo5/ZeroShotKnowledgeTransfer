@@ -14,23 +14,36 @@ This is accompanying code for the paper "Zero-shot Knowledge Transfer via Advers
 - tensorboard 1.7.0 (for logging, + needs tensorflow)
 
 ## Run zero shot knowledge transfer
-1. Pretrain a teacher for the dataset/architecture you want, or download some of mine [here](https://drive.google.com/drive/folders/1lLgAndtJGUOUWvFGC8f1BFA5RIgyEfct?usp=sharing)
+1. Pretrain a teacher for the dataset/architecture you want (or download some of mine [here](https://drive.google.com/drive/folders/1lLgAndtJGUOUWvFGC8f1BFA5RIgyEfct?usp=sharing))
 2. Make sure you have the same folder structure as in the link above, i.e. Pretrained/{dataset}/{architecture}/last.pth.tar
 3. Edit the paths in scripts/ZeroShot/main0.sh and run it
 
 ## Make transition curves
-1. Pretrain a zero-shot student or a student with KD+AT
+1. Pretrain a zero-shot student or a student with KD+AT (or download some of mine [here]())
 2. Edit the paths in scripts/TransitionCurves/transition_curves0.sh and run it
 3. This saves .pickle file with all the transition curves
+4. You can import that file in notebooks/transition_curves_and_error.ipynb to plot the transition curves and calculate MTE scores
 
 ## Cite
 This work is under review for NeurIPS2019. In the mean time, please cite:
 ```
 @article{Micaelli2019ZeroShotKT,
   author    = {Paul Micaelli and
-               Amos Storkey},
+               Amos J. Storkey},
   title     = {Zero-shot Knowledge Transfer via Adversarial Belief Matching},
-  url       = {https://arxiv.org/abs/1905.09768}
+  journal   = {CoRR},
+  volume    = {abs/1905.09768},
+  year      = {2019},
+  url       = {http://arxiv.org/abs/1905.09768},
+  archivePrefix = {arXiv},
+  eprint    = {1905.09768},
+  timestamp = {Wed, 29 May 2019 11:27:50 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1905-09768},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
 }
 
 ```
+
+## Notes
+- Version 1 and 2 on arxiv have lower accuracy scores because I hadn't trained batchnorm layers properly.
+- Attention only gives you an average of 2% boost across all architectures tested so you can delete that code if you want to save on memory/compute time.

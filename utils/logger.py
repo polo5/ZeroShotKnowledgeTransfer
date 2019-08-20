@@ -9,10 +9,9 @@ import tensorflow as tf
 
 
 class Logger(object):
-    def __init__(self, log_dir, keys_to_print=('')):
+    def __init__(self, log_dir):
         """Create a summary writer logging to log_dir."""
         self.log_dir = log_dir
-        self.keys_to_print = keys_to_print
         self.writer = tf.summary.FileWriter(log_dir)
         self.avg_state = {}
         self.csv_buffer = {}  # for csv log

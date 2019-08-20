@@ -109,7 +109,7 @@ class TransitionCurves(object):
 
         if self.args.check_test_accuracies:
             acc_netA, acc_netB = self.test()
-            print('netA = {:02.2f}% --- netB: {:02.2f}%'.format(acc_netA * 100, acc_netB * 100))
+            print('Checked test accuracies: netA = {:02.2f}% --- netB: {:02.2f}%'.format(acc_netA * 100, acc_netB * 100))
 
         pj_curves_netA = torch.zeros(self.args.n_matching_images, self.n_classes - 1, self.args.n_adversarial_steps)
         pj_curves_netB = torch.zeros(self.args.n_matching_images, self.n_classes - 1, self.args.n_adversarial_steps)
@@ -170,6 +170,7 @@ class TransitionCurves(object):
                 logits_netB, *_ = self.netB(x)
                 running_acc_netA.update(float(accuracy(logits_netA.data, y, topk=(1,))[0]), x.shape[0])
                 running_acc_netB.update(float(accuracy(logits_netB.data, y, topk=(1,))[0]), x.shape[0])
+                print(running_acc_netA.avg(), running_acc_netB.avg())
 
         return running_acc_netA.avg(), running_acc_netB.avg()
 
@@ -229,12 +230,12 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description='Welcome to the future')
 
-    parser.add_argument('--dataset', type=str, default='SVHN', choices=['CIFAR10', 'SVHN'])
-    parser.add_argument('--netA_path', type=str, default='/home/paul/Pretrained/ZeroShot/SVHN/WRN-40-2_to_WRN-16-1/last.pth.tar')
-    parser.add_argument('--netB_path', type=str, default='/home/paul/Pretrained/SVHN/WRN-40-2/last.pth.tar')
+    parser.add_argument('--dataset', type=str, default='CIFAR10', choices=['CIFAR10', 'SVHN'])
+    parser.add_argument('--netA_path', type=str, default='/home/paul/Pretrained/ZeroShot/CIFAR10/WRN-40-2_to_WRN-16-1/last.pth.tar')
+    parser.add_argument('--netB_path', type=str, default='/home/paul/Pretrained/CIFAR10/WRN-40-2/last.pth.tar')
     parser.add_argument('--netA_architecture', type=str, default='WRN-16-1')
     parser.add_argument('--netB_architecture', type=str, default='WRN-40-2')
-    parser.add_argument('--check_test_accuracies', type=str2bool, default=False)
+    parser.add_argument('--check_test_accuracies', type=str2bool, default=True)
     parser.add_argument('--use_train_set', type=str2bool, default=False)
     parser.add_argument('--n_matching_images', type=int, default=2)
     parser.add_argument('--try_load_indices', type=str2bool, default=False)
@@ -250,11 +251,13 @@ if __name__ == "__main__":
     args.device = torch.device('cuda') if args.use_gpu else torch.device('cpu')
     args.dataset_path = os.path.join(args.datasets_path, args.dataset)
     args.use_gpu = args.use_gpu and torch.cuda.is_available()
-    args.experiment_name = 'TransitionCurves_{}_{}_k{}_n{}_lr{}_seed{}'.format(args.dataset, args.netA_architecture,
-                                                                               args.netB_architecture,
-                                                                               args.n_adversarial_steps,
-                                                                               args.n_matching_images,
-                                                                               args.learning_rate, args.seed)
+    args.experiment_name = 'TransitionCurves_{}_{}_{}_k{}_n{}_lr{}_seed{}'.format(args.dataset,
+                                                                                  args.netA_architecture,
+                                                                                  args.netB_architecture,
+                                                                                  args.n_adversarial_steps,
+                                                                                  args.n_matching_images,
+                                                                                  args.learning_rate,
+                                                                                  args.seed)
     args.experiment_name += '_train' if args.use_train_set else '_test'
     print('\nRunning on device: {}'.format(args.device))
 

@@ -8,8 +8,7 @@ LOG_DIR=/afs/inf.ed.ac.uk/user/s17/s1771851/logs
 PRETRAINED_MODELS_DIR=/disk/scratch/s1771851/Pretrained/
 DATASETS_DIR=/disk/scratch/s1771851/Datasets/Pytorch
 
-longjob -28day -nobackground -c \
-"python ${EXECUTABLE_FILE} \
+python ${EXECUTABLE_FILE} \
 --dataset CIFAR10 \
 --total_n_pseudo_batches 8e4 \
 --n_generator_iter 1 \
@@ -30,4 +29,4 @@ longjob -28day -nobackground -c \
 --save_model_path ${LOG_DIR} \
 --seeds 0 1 2 \
 --workers 2 \
---use_gpu True"
+--use_gpu True
