@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="196541ad-a80a-4d6e-b845-249c4accfd08" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/TransitionCurves/transition_curves1.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/TransitionCurves/transition_curves2.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/TransitionCurves/transition_curves3.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/evaluate_cinic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/wresnet.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/ZeroShot/main0.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/ZeroShot/main0.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/ZeroShot/main1.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/ZeroShot/main1.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/ZeroShot/main2.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/ZeroShot/main2.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/ZeroShot/main3.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/ZeroShot/main3.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/ZeroShot/main4.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/ZeroShot/main4.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/ZeroShot/main5.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/ZeroShot/main5.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solver.py" beforeDir="false" afterPath="$PROJECT_DIR$/solver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/logger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/transition_curves.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/transition_curves.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/evaluate_cinic.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/TransitionCurves/transition_curves0.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="82" />
+            <state relative-caret-position="575">
+              <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -142,10 +126,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
-    <option name="y" value="25" />
-    <option name="width" value="1853" />
-    <option name="height" value="1175" />
+    <option name="x" value="1920" />
+    <option name="y" value="-2" />
+    <option name="width" value="1200" />
+    <option name="height" value="1922" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -369,18 +353,18 @@
       <workItem from="1564141009657" duration="9175000" />
       <workItem from="1564249372252" duration="4958000" />
       <workItem from="1564484954999" duration="7031000" />
-      <workItem from="1566326537894" duration="1528000" />
+      <workItem from="1566326537894" duration="1607000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76776000" />
+    <option name="totallyTimeSpent" value="76855000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1175" extended-state="7" />
+    <frame x="1920" y="-2" width="1200" height="1922" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18151632" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28422877" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -394,7 +378,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Inspection Results" order="10" weight="0.3298279" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.11567878" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.06748466" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.3298279" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -613,16 +597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/evaluate_cinic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="34" column="21" lean-forward="true" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/ZeroShot/main0.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
@@ -686,10 +660,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/utils/evaluate_cinic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="769">
+          <caret line="34" column="21" lean-forward="true" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/TransitionCurves/transition_curves0.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="82" />
+        <state relative-caret-position="575">
+          <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
         </state>
       </provider>
     </entry>
