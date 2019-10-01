@@ -75,7 +75,7 @@ if __name__ == "__main__":
     args.dataset_path = os.path.join(args.datasets_path, args.dataset)
     args.use_gpu = args.use_gpu and torch.cuda.is_available()
     args.device = torch.device('cuda') if args.use_gpu else torch.device('cpu')
-    args.experiment_name = 'ZEROSHOTKT_{}_{}_{}_gi{}_si{}_zd{}_plr{}_slr{}_bs{}_T{}_beta{}'.format(args.dataset, args.teacher_architecture,  args.student_architecture, args.n_generator_iter, args.n_student_iter, args.z_dim, args.generator_learning_rate, args.student_learning_rate, args.batch_size, args.KL_temperature, args.AT_beta)
+    args.experiment_name = 'ZeroShotKnowledgeTransfer_{}_{}_{}_gi{}_si{}_zd{}_plr{}_slr{}_bs{}_T{}_beta{}'.format(args.dataset, args.teacher_architecture,  args.student_architecture, args.n_generator_iter, args.n_student_iter, args.z_dim, args.generator_learning_rate, args.student_learning_rate, args.batch_size, args.KL_temperature, args.AT_beta)
 
     print('\nTotal data batches: {}'.format(args.total_n_pseudo_batches))
     print('Logging results every {} batch'.format(args.log_freq))

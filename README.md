@@ -1,6 +1,6 @@
 # Zero Shot Knowledge Transfer
 
-This is accompanying code for the paper "Zero-shot Knowledge Transfer via Adversarial Belief Matching" [see arxiv](https://arxiv.org/abs/1905.09768)
+This is accompanying code for the NeurIPS 2019 spotlight paper "Zero-shot Knowledge Transfer via Adversarial Belief Matching" [see arxiv](https://arxiv.org/abs/1905.09768)
 
 ## What is this work about? (TLDR)
 
@@ -43,6 +43,10 @@ If you use this work please consider citing:
 }
 
 ```
+
+## Baselines
+
+A few people have asked for the KD+AT few shot baselines so I've made them available in [this repo](https://github.com/polo5/FewShotKnowledgeTransfer)
 
 ## Notes
 - Version 1 and 2 on arxiv have lower accuracy scores because I hadn't trained batchnorm layers properly.

@@ -135,7 +135,8 @@ class ZeroShotKTSolver(object):
                     test_acc = self.test()
 
                     with torch.no_grad():
-                        print('\nBatch {}/{} -- Generator Loss: {:02.2f} -- Student Loss: {:02.2f} -- Test Acc: {:02.2f}%'.format(self.n_pseudo_batches, self.args.total_n_pseudo_batches, running_generator_total_loss.avg(), running_student_total_loss.avg(), test_acc*100))
+                        print('\nBatch {}/{} -- Generator Loss: {:02.2f} -- Student Loss: {:02.2f}'.format(self.n_pseudo_batches, self.args.total_n_pseudo_batches, running_generator_total_loss.avg(), running_student_total_loss.avg()))
+                        #print('Test Acc: {:02.2f}%'.format(test_acc*100))
 
                         self.logger.scalar_summary('TRAIN_PSEUDO/generator_total_loss', running_generator_total_loss.avg(), self.n_pseudo_batches)
                         self.logger.scalar_summary('TRAIN_PSEUDO/student_total_loss', running_student_total_loss.avg(), self.n_pseudo_batches)
@@ -162,6 +163,7 @@ class ZeroShotKTSolver(object):
 
                 if self.args.save_n_checkpoints > 1:
                     if (self.n_pseudo_batches+1) % int(self.args.total_n_pseudo_batches / self.args.save_n_checkpoints) == 0:
+                        test_acc = self.test()
                         self.save_model(test_acc=test_acc)
 
                 self.n_pseudo_batches += 1
@@ -172,6 +174,7 @@ class ZeroShotKTSolver(object):
             running_batch_time.update(time() - end)
             end = time()
 
+        test_acc = self.test()
         if self.args.save_final_model:  # make sure last epoch saved
             self.save_model(test_acc=test_acc)
 
