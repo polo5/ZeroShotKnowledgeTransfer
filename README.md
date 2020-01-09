@@ -12,6 +12,7 @@ This is accompanying code for the NeurIPS 2019 spotlight paper "Zero-shot Knowle
 - Python 3.6
 - pytorch 1.0.0 (both cpu and gpu version tested)
 - tensorboard 1.7.0 (for logging, + needs tensorflow)
+- scipy <= 1.2 (otherwise scipy.misc.toimage complains in logger)
 
 ## Run zero shot knowledge transfer
 1. Pretrain a teacher for the dataset/architecture you want (or download some of mine [here](https://drive.google.com/drive/folders/1lLgAndtJGUOUWvFGC8f1BFA5RIgyEfct?usp=sharing))
