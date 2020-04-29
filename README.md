@@ -28,21 +28,16 @@ This is accompanying code for the NeurIPS 2019 spotlight paper "Zero-shot Knowle
 ## Cite
 If you use this work please consider citing:
 ```
-@article{Micaelli2019ZeroShotKT,
-  author    = {Paul Micaelli and
-               Amos J. Storkey},
-  title     = {Zero-shot Knowledge Transfer via Adversarial Belief Matching},
-  journal   = {CoRR},
-  volume    = {abs/1905.09768},
-  year      = {2019},
-  url       = {http://arxiv.org/abs/1905.09768},
-  archivePrefix = {arXiv},
-  eprint    = {1905.09768},
-  timestamp = {Wed, 29 May 2019 11:27:50 +0200},
-  biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1905-09768},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@incollection{Micaelli2019ZeroShotKT,
+title = {Zero-shot Knowledge Transfer via Adversarial Belief Matching},
+author = {Micaelli, Paul and Storkey, Amos J},
+booktitle = {Advances in Neural Information Processing Systems 32},
+editor = {H. Wallach and H. Larochelle and A. Beygelzimer and F. d\textquotesingle Alch\'{e}-Buc and E. Fox and R. Garnett},
+pages = {9551--9561},
+year = {2019},
+publisher = {Curran Associates, Inc.},
+url = {http://papers.nips.cc/paper/9151-zero-shot-knowledge-transfer-via-adversarial-belief-matching.pdf}
 }
-
 ```
 
 ## Baselines
